@@ -1,0 +1,5 @@
+{
+  "name": "VEO Video Generator",
+  "description": "Generate stunning videos from a text prompt and an optional image using Google's VEO model. Describe your scene, and watch AI bring it to life in high-quality video format.",
+  "requestFramePermissions": []
+}
