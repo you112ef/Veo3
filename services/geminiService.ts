@@ -65,7 +65,8 @@ const pollOperation = async <T,>(operation: any, setLoadingMessage: (message: st
             currentOperation = await ai.operations.getVideosOperation({ operation: currentOperation });
         } catch (error) {
             console.error("Error during polling:", error);
-            throw new Error("فشل أثناء التحقق من حالة إنشاء الفيديو.");
+            const specificPollingError = getErrorMessage(error);
+            throw new Error(`فشل التحقق من حالة الإنشاء: ${specificPollingError}`);
         }
     }
 
